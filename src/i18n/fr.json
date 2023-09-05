@@ -1,0 +1,40 @@
+{
+    "@metadata": {
+         "authors": [
+           "DFE"
+         ],
+         "last-updated": "2019",
+         "locale": "fr"
+     },
+     "test_browser_title": "Navigateur",
+     "test_micro_title": "Microphone",
+     "test_camera_title": "Caméra",
+     "test_devices_title": "Liste de vos périphériques de médias",
+     "test_network_title": "Media Connexion",
+     "test_data_title": "Data Connexion",
+     "test_room_title": "Conférence de test WebRTC",
+     "test_browser_title_description": "Sur cette page vous allez pouvoir vérifier la compatibilité de votre poste de travail avec WebRTC.",
+     "run_test": "Lancer le test",
+     "re_run_test": "Relancer le test",
+     "browser_warning_message": "Pour une bonne utilisation de WebRTC nous recommandons les navigateurs suivants : Chrome , Firefox ou Chromium.",
+     "browser_success_message": "Votre navigateur est compatible avec WebRTC.<br> Pour bénéficier d 'une meilleure expérience utilisateur nous vous recommandons de toujours utiliser les dernières versions stables des navigateurs.",
+     "browser_error_message": "Votre navigateur n 'est pas compatible avec WebRTC.<br> Veuillez utiliser l 'un des navigateurs suivant : <a href=\"faq/#answer4\">Navigateurs</a>.",
+     "microphone_label": "Votre microphone utilisé par défaut est : ",
+     "camera_label": "Votre caméra utilisée par défaut est : ",
+     "micro_success_message": "Votre microphone est correctement détecté.",
+     "micro_error_message": "Impossible d 'utiliser votre microphone.<br>Vous devez vérifier que votre microphone est fonctionnel et bien autorisé à être utilisé par votre navigateur : <a href=\"faq/#answer6\">autorisations</a.><br>Message du navigateur : ",
+     "camera_success_message": "Votre caméra est correctement détectée.",
+     "camera_error_message": "Impossible d 'utiliser votre Caméra.<br>Vous devez vérifier que votre caméra est fonctionnelle et bien autorisée à être utilisée par votre navigateur : <a href=\"faq/#answer6\">autorisations</a>.<br>Message du navigateur : ",
+     "devices_success_message": "Tous les périphériques suivant ont été listés : ",
+     "devices_error_message": "Impossible de lister vos périphériques de capture de média (Audio et Vidéo).",
+     "network_test": "Test des connexions médias :",
+     "devices_audioinput_label": "Capture Audio :",
+     "devices_audiooutput_label": "Sortie Audio :",
+     "devices_videoinput_label": "Capture Vidéo :",
+     "network_success_message": "Une connexion média WebRTC a bien été réalisée vers  nos serveurs.",
+     "network_error_message": "Impossible de réaliser une connexion média WebRCT vers notre serveur de test.<br>Vous devez vous trouver dans un environnement ou la trafic WebRTC est filtré.</br>Veuillez vérifier auprès de vos responsable informatiques locaux les règles de filtrages des connexions suivante : <a href=\"https://services.renater.fr/voix_et_image/configuration_de_pare-feu#WebRTC\">filtrage</a>.<br>Veuillez vérifier vos <a href=\"faq#answer6\">permissions de navigateur</a><br>",
+     "test_room_success_message": "Votre flux média a bien été connecté.",
+     "test_room_error_message": "Impossible de detecter la connection votre flux média.<br>Veuillez attendre au moins 30 secondes avant d'arrêter le test.<br>Veuillez vérifier que vous avez bien le droit de démarer une <a href=\"faq#answer1\">webconférence WebRTC</a>.<br>Veuillez vérifier vos <a href=\"faq#answer6\">permissions de navigateur</a>.<br>Veuillez vérifier vos règles de filtrages réseaux vers <a href=\"https://services.renater.fr/voix_et_image/configuration_de_pare-feu\">nos media servers</a>. ",
+     "test_room_info_label": "Une authentification peut vous être demandée pour effectuer ce test.<br> Ensuite, veuillez attendre au moins 30 secondes pour avoir le résultat complet du test.",
+     "page_not_found": "Page introuvable"
+}

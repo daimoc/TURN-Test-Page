@@ -1,0 +1,39 @@
+{
+    "@metadata": {
+         "authors": [
+           "DFE"
+         ],
+         "last-updated": "2019",
+         "locale": "en"
+     },
+     "test_browser_title": "Browser",
+     "test_micro_title": "Microphone",
+     "test_camera_title": "Camera",
+     "test_devices_title": "List your media devices",
+     "test_network_title": "Media Network connections",
+     "test_data_title" : "Data Network connections",
+     "test_room_title": "WebRTC test room",
+     "test_browser_title_description": "Check your browser compatibility with the WebRTC service.",
+     "run_test": "Run test",
+     "re_run_test": "Re-run Test",
+     "browser_warning_message": "For the best user experience on WebRTC, please use : Chrome, Firefox or Chromium.",
+     "browser_success_message": "Your browser is compatible with WebRTC.<br>  For the best user experience always use last sable version of your browser.",
+     "browser_error_message": "Your browser is not compatible with WebRTC.<br>  Please use one these recommended <a href=\"faq/#answer4\">Browsers</a>.",
+     "microphone_label": "Your default microphone is :",
+     "camera_label": "Your default camera is :",
+     "micro_success_message": "Your microphone is correctly detected.",
+     "micro_error_message": "Unable to use your microphone. Please check your microphone system configuration and your browser <a href=\"faq#answer6\"> permission</a>.<br>Browser error : ",
+     "camera_success_message": "Your camera is correctly detected.",
+     "camera_error_message": "Unable to use your camera. Please check your camera  system configuration and your browser <a href=\"faq#answer6\">permission</a>.<br>Browser error : ",
+     "devices_success_message": "Detected media devices :",
+     "devices_error_message": "Unable to list your media devices (Audio and Video).",
+     "network_test": "Testing your media connections :",
+     "devices_audioinput_label": "Audio Input :",
+     "devices_audiooutput_label": "Audio Output :",
+     "devices_videoinput_label": "Video Input :",
+     "network_success_message": "A WebRTC Media connexion has been made with our server.",
+     "network_error_message": "Unable to establish a WebRTC media connection to our test server. You should be connected on media restricted network. Please ask you local support to check your network filter rules to our <a href=\"https://services.renater.fr/voix_et_image/configuration_de_pare-feu\">media servers</a>.<br>Please verify that you have check your browser <a href=\"faq#answer6\">permission</a><br>",
+     "test_room_success_message": "Echo media Stream was connected",
+     "test_room_error_message": "Unable to detect the connection of your echo media stream.<br>Please wait 30 seconds before ending the test room.<br>Please verify that you have right to start a <a href=\"faq#answer1\">WebRTC webconfrence</a>.<br>Please verify that you have check your browser <a href=\"faq#answer6\">permission</a>.<br>Please verify your local network filter rules to our <a href=\"https://services.renater.fr/voix_et_image/configuration_de_pare-feu\">media servers</a>. ",
+     "test_room_info_label": "Your login information could be asked by this test.<br> After login, please wait for 30 seconds to obtain the complete test result."
+}

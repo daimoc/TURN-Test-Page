@@ -1,0 +1,198 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" data-whatinput="keyboard" data-whatintent="mouse" class=" whatinput-types-initial whatinput-types-keyboard"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+        <script src="https://cdn.plot.ly/plotly-2.25.2.min.js" charset="utf-8"></script>
+
+
+        <title>Turn Test Page</title>
+        <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+        <script  src="js/lib/jquery-3.4.1.min.js"></script>
+        <script  src="js/lib/foundation.min.js"></script>
+        <script  src="js/lib/bowser.js"></script>
+
+        <script src="js/lib/jquery_i18n/CLDRPluralRuleParser.js"></script>
+        <script src="js/lib/jquery_i18n/jquery.i18n.js"></script>
+        <script src="js/lib/jquery_i18n/jquery.i18n.messagestore.js"></script>
+        <script src="js/lib/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+        <script src="js/lib/jquery_i18n/jquery.i18n.language.js"></script>
+        <script src="js/lib/jquery_i18n/jquery.i18n.parser.js"></script>
+        <script src="js/lib/jquery_i18n/jquery.i18n.emitter.js"></script>
+        <script src="js/lib/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+
+     
+
+
+        <!-- TestPage JS -->
+        <script  src="js/test_browser_page.js"></script>
+        <script  src="js/webrtc_utils.js"></script>
+        <script  src="js/webrtc_datachannel_utils.js"></script>
+        <script  src="js/config.js"></script>
+
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="auth" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta class="foundation-mq"></head>
+
+<main data-page="test_browser">
+
+<noscript>
+    <div class="error message">
+        This application heavily relies on Javascript, you must enable it to be able to start.
+    </div>
+</noscript>
+
+<script type="text/javascript">
+  console.log("Load Test Room scripts");
+  $( document ).ready(function() {
+
+    // Init CSS foundation framework
+    $(document).foundation();
+
+    // Translate label
+    $.i18n().load().done(
+      function (){
+        $('body').i18n();
+      }
+    );
+
+    // Init test to run
+    if (runTest == undefined){
+      runTest = [];
+    }
+    runTest[1]=testMediaConnexion;
+    runTest[2]=testDataConnexion;
+
+    $("#runButton").click(startWebRTCTest);
+    $("#reRunButton").click(startWebRTCTest);
+    $("#exportButton").click(exportResult);
+
+    $("#turn_server_uri").val(turn_server_uri_default);
+    $("#turn_server_username").val(turn_server_username_default);
+    $("#turn_server_credentials").val(turn_server_credentials_default);
+  });
+</script>
+
+
+<nav class="row">
+    <ul class="small-12 medium-8 small-centered">
+        <li class="small-12 columns">
+            <a href="" class="radius tip-top  selected none" data-menu-action="" data-trigger-class="none" data-tooltip="axn72q-tooltip" data-template-classes="tooltip-for-small" aria-haspopup="true" title="" aria-describedby="55f1mg-tooltip" data-yeti-box="55f1mg-tooltip" data-toggle="55f1mg-tooltip" data-resize="55f1mg-tooltip" data-events="resize">
+                <span>
+                    <img src="img/flask.svg?v=0ce2af49-1549273753" alt="Test your configuration">
+                </span>
+                <label class="hide-for-small-only hide-for-medium-only" aria-hidden="true">Test your configuration</label>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<section class="row" data-component="faq">
+    <p class="text-center" data-i18n="test_browser_title_description"> Check your browser  </p>
+    <a id="runButton" class="small-6 medium-3 small-centered columns button highlight" data-i18n="run_test">Run test</a>
+<section>
+
+
+<div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="medium-6 cell">
+        <label>TURN server base uri
+          <input id="turn_server_uri" type="text" autocomplete="on">
+        </label>
+      </div>
+      <div class="medium-6 cell">
+        <label>TURN username
+          <input id="turn_server_username" type="text">
+        </label>
+      </div>
+      <div class="medium-6 cell">
+        <label>TURN credentials
+          <input id="turn_server_credentials" type="text">
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+<ul class="accordion accroot" data-accordion="s9bh9g-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist">
+
+
+<li class="accordion-item " data-accordion-item="">
+    <a href="#answer1" class="accordion-title" aria-controls="answer1" role="tab" id="answer1-label" aria-expanded="false" aria-selected="false" data-i18n="test_network_title"> 1.&nbsp;Media connections </a>
+    <div id="answer1" class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="answer2-label" aria-hidden="true">
+        <div id="network_test" class="row">
+            <div id="netStats" class="columns medium-4">
+              <span style="display:block;text-decoration-line:underline"> Network status </span>
+                <span style="display:block;">Received <span id="byteRate">0</span> kbits/s</span>
+                <span style="display:block;">Fraction Lost <span id="fractionLost">0</span></span>
+                <span style="display:block;">Video Pakcet Lost <span id="packetLost">0</span> packets</span>
+                <span style="display:block;">Video Packet Received <span id="packetReceived">0</span> packets</span>
+                <span style="display:block;">Video Percent loss <span id="packetLostRate">0</span> % </span>
+                <span style="display:block;">Jitter <span id="jitter">0</span> sec</span>
+                <span style="display:block;">Candidate <span id="candidate">none</span> </span>
+            </div>
+            <div id="netVideoLocal" class="columns medium-4">
+                <span style="display:block;"> Local Video</span>
+                <video id="localvideo" style="display:block;width:400px;height:300px;background-color: grey;">
+            </video></div>
+            <div id="netVideoRemote" class="columns medium-4">
+                <span style="display:block;"> Remote Video</span>
+                <video id="remotevideo" style="display:block;width:400px;height:300px;background-color: grey;">
+            </video></div>
+        </div>
+
+        <div class="row">
+          <div id="data_graph" style="width:600px;height:250px;"></div>
+        </div>
+        <div class="row">
+          <div id="data_graph2" style="width:600px;height:250px;"></div>
+          <a id="exportButton" class="small-6 medium-3 small-centered columns button highlight" data-i18n="Export Result">Export Result</a>
+        </div>
+
+        <div class="row">
+          <div class="columns">
+            <span id="label1 class="hide" style="display:block;" data-i18n="network_test"></span>
+            <span id="result1" class="hide result" style="display:block;">
+            </span>
+          </div>
+          <div class="columns medium-6">
+            <div id="netSpinner" class="loader hide"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span id="success1" class="hide" style="display:block;" data-i18n="[html]network_success_message"></span>
+          <span id="fail1" class="hide" style="display:block;" data-i18n="[html]network_error_message"></span>
+        </div>
+      </div>
+</li>
+
+
+<li class="accordion-item " data-accordion-item="">
+    <a href="#answer2" class="accordion-title" aria-controls="answer2" role="tab" id="answer2-label" aria-expanded="false" aria-selected="false" data-i18n="test_data_title"> 2.&nbsp;Data connections </a>
+    <div id="answer2" class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="answer32label" aria-hidden="true">
+        <div class="row">
+          <div class="columns">
+            <span id="label2" class="hide" style="display:block;" data-i18n="network_test"></span>
+            <span id="result2" class="hide result" style="display:block;">
+            </span>
+          </div>
+          <div class="columns medium-6">
+            <div id="netSpinner" class="loader hide"></div>
+          </div>
+        </div>
+        <div class="row">
+          <span id="success2" class="hide" style="display:block;" data-i18n="[html]network_success_message"></span>
+          <span id="fail2" class="hide" style="display:block;" data-i18n="[html]network_error_message"></span>
+        </div>
+      </div>
+</li>
+
+</ul>
+    </section>
+    <a id="reRunButton" class="hide small-6 medium-3 small-centered columns button highlight" data-i18n="re_run_test"></a>
+
+</section>
+
+
+</main>
