@@ -8,9 +8,9 @@ Test the configuration and the stability of a Turn server and your network to th
 
 ## You need a working TURNserver with lt auth credential
 
-Install a turn server and the configure lt credential.
+Install a turn server and then configure lt credential.
 
-For exemple in Ubuntu distib : 
+For exemple in Ubuntu distribution : 
 
 ```
 apt install coturn
