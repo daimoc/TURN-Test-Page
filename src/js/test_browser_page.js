@@ -98,7 +98,7 @@ function onDownload(){
 function exportResult(){
   result = [];
   for (i=0;i<time.length;i++){
-    var item = {time:time[i],loss:data[i],received:packetReceivedArray[i]};
+    var item = {time:time[i],loss:data[i],received:packetReceivedArray[i],lossrate:packetLostArray[i]};
     result.push(item);
   }
   

@@ -6,6 +6,34 @@ A simple WebRTC page that start an echo test with the selected TURN server.
 
 Test the configuration and the stability of a Turn server and your network to this server.
 
+## You need a working TURNserver with lt auth credential
+
+Install a turn server and the configure lt credential.
+
+For exemple in Ubuntu distib : 
+
+```
+apt install coturn
+```
+
+Add this following line in /etc/turn.conf with your own TURN_USER and TURN_PASSWORD: 
+
+```
+lt-cred-mech
+user=[TURN_USER]:[TURN_PASSWORD]
+realm=test
+listening-ip=0.0.0.0
+syslog
+verbose 
+```
+
+If you're deploying the turn server behind a NAT add this following line with your PUBLIC_IP and PRIVATE_IP : 
+
+```
+external-ip=[PUBLIC_IP]/[PRIVATE_IP]
+```
+
+
 ## Usage
 
 Set you default TURN configuration in config/config.js and put the src file in a webserver.
