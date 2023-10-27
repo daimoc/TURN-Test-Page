@@ -2,9 +2,14 @@
 
 A simple WebRTC page that start an echo test with the selected TURN server.
 
+
+
+
 ## Motivation
 
 Test the configuration and the stability of a Turn server and your network to this server.
+
+<img src="doc/TURn_test.png" width=70% height=70%>
 
 ## You need a working TURNserver with lt auth credential
 
