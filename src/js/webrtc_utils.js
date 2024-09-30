@@ -28,6 +28,8 @@ var jitter = 0;
 
 var connectionTime = 3*60*60*1000;
 
+//var connectionTime = 3*1000;
+
 /**
 * Turn media relay informations
 */
@@ -37,7 +39,7 @@ var serverRestHosts = [
 ];
 var protocol = [
   'udp',
-  //'tcp'
+  'tcp'
 ];
 
 var stunPort = [
@@ -54,7 +56,7 @@ var turnPort = [
 ];
 
 var turnsPort = [
-//   '443'
+   '443'
 //   '5349',
 //  '5350'
 ];
@@ -434,7 +436,11 @@ function writeStats(results){
         data.push(packetLost);
         packetReceivedArray.push(packetReceived);
         currentimeSecond=(report.timestamp-startTime)/1000;
-        time.push(currentimeSecond);
+
+        var date = new Date(report.timestamp);
+
+        time.push(date);
+
         $('#packetLost').text(packetLost);
         $('#fractionLost').text(fractionLost);
         $('#jitter').text(jitter);
@@ -443,6 +449,7 @@ function writeStats(results){
         packetLostArray.push(packetLostRate);
         $('#packetLostRate').text(packetLostRate);
       }
+
   });
   updateGraph();
 }

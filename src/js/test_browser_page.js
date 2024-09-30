@@ -11,10 +11,10 @@ var iceServer = {};
 var serverIndex = 0 ;
 var TurnServerEndpointUrl = "https://gouv1.rendez-vous.renater.fr/home/rest.php/TurnServer";
 
-var time=[0];
-var data=[0];
-var packetReceivedArray=[0];
-var packetLostArray=[0];
+var time=[];
+var data=[];
+var packetReceivedArray=[];
+var packetLostArray=[];
 
 var polyGraph;
 
@@ -23,7 +23,8 @@ var layout = {
   xaxis: {
     autorange: true,
     range: [0, 100],
-    type: 'linear'
+    title: 'Time',
+    type: 'date'   // Ensures Plotly treats x-axis as time series
   },
   yaxis: {
     autorange: true,
@@ -37,7 +38,8 @@ var layout2 = {
   xaxis: {
     autorange: true,
     range: [0, 100],
-    type: 'linear'
+    title: 'Time',
+    type: 'date'   // Ensures Plotly treats x-axis as time series
   },
   yaxis: {
     autorange: true,
